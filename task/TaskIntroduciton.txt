@@ -1,0 +1,38 @@
+Introduction
+The Swinburne Bingo club has decided to update their practices and join the digital world.  They have requested a program to be made that is able to draw the numbers for a Bingo game.  
+They have already outsourced the creation of the bingo playing cards to some students.  They only require the number drawing to be created.
+However, the average age of the Swinburne Bingo club is 110 and they are uncomfortable with using anything more than a console program.
+
+Tasks 
+Write a program that draws bingo numbers. When the program runs, it will randomly choose a number between 1 and a user inputted upper limit.  The program should start by requesting the upper limit from the user.
+It should then go to a main menu that looks like:
+ 
+
+Pass Tasks
+1.	Upon starting the program should ask for the upper limit of numbers to be drawn
+i.	Program should not accept non-numeric input
+ii.	Program should not accept negative numbers
+
+2.	Upon pressing “1” a new number is drawn
+i.	No duplicate numbers should be drawn
+ii.	No negative numbers should be drawn
+
+3.	Upon pressing “2” all drawn numbers should be printed
+i.	Provide an option to print all numbers in the order that they were drawn
+ii.	Provide an option to print all numbers in numerical order
+
+4.	Upon pressing “3” user is prompted to enter numbers one by one to check if they have been drawn
+
+5.	Upon pressing “4” the program will exit
+
+Extension (optional) (as above, but include):
+1.	Program will not accept non-numeric input and handle
+2.	Program will not accept negative numbers and handle
+3.	Create a new menu option that allows a list of numbers to be entered.  These will all be checked to see if they have been drawn.
+
+Extra Extension (optional):
+1.	Create a new menu option that returns some statistics
+i.	Total of numbers drawn thus far
+ii.	Average of numbers drawn thus far
+
+2.	Upon exiting the program will write the drawn numbers to a text file called “drawn_numbers.txt”
