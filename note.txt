@@ -1,0 +1,28 @@
+
+
+
+
+-------------What a need to do--------------
+
+
+    -----generate a random numbre
+        Befort starting anything you need to ask how amythe limit a number drawing
+            -- no negatice number alowd
+            -- number only 
+                --erreur meesage if wrong caratere input
+        -----ask user for  4 choose
+            
+            ---1 start the bingo game by giving a number / next number
+                -- generate a number byr the limitation asking in begining
+                    --non duplication number are alowd
+            
+            ---2 
+                --all print numbre of the list need to be shown
+                    -option the numerical order
+            
+            ---3
+                --ckeck statement if the numbre as been drawing
+            
+            ---4
+                --exit the programe 
+                
