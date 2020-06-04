@@ -132,6 +132,13 @@ namespace task
             string blabla = Console.ReadLine();
             int MaxNumbre = int.Parse(blabla);
 
+            //Array of all Numbre
+            int[] ArrayNUM = new int[MaxNumbre];
+            for (int i = 1; i < ArrayNUM.Length; i++)
+            {
+                ArrayNUM[i] = i;
+            }
+
             System.Console.WriteLine(" ");
             System.Console.WriteLine(" ");
             System.Console.WriteLine("ok les's start make your choose");
@@ -150,34 +157,23 @@ namespace task
             {
                 Random r = new Random();
                 int RandomNum = r.Next(0, MaxNumbre);
+                //change the random num in array by zero  and fine le possition of the array to print the numbre again  
+                ArrayNUM[RandomNum] = 0;
+                
+                
                 System.Console.WriteLine(" ");
                 System.Console.WriteLine("------------------------------------------- ");
-                System.Console.WriteLine("le numbre IS  || " + RandomNum+ " ||");
+                System.Console.WriteLine("le numbre IS  || " + RandomNum + " ||");
                 System.Console.WriteLine("------------------------------------------- ");
                 System.Console.WriteLine(" ");
                 System.Console.WriteLine("what know ????");
-
-            }
-            else if (PickMenu == 2)
-            {
-                //Array of all Numbre
-                int[] ArrayNUM = new int[MaxNumbre];
-
-                for (int i = 1; i < ArrayNUM.Length; i++)
-                {
-                    ArrayNUM[i] = i;
-                }
                 
 
-
-
-                System.Console.WriteLine("hello numbre 2");
-                System.Console.WriteLine("hello numbre 2");
-                System.Console.WriteLine("hello numbre 2");
-                System.Console.WriteLine("hello numbre 2");
-                System.Console.WriteLine("hello numbre 2");
-                System.Console.WriteLine("hello numbre 2");
             }
+            
+           
+            
+           
 
 
 
