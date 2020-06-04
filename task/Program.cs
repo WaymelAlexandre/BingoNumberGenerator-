@@ -7,8 +7,8 @@ namespace task
     class Program
     {
         static void Main(string[] args)
-        {
-            // basic menu
+        {/*
+            //basic menu
             //starting game by asking the limmit
 
             System.Console.WriteLine("How mush is yours upper limit of numbers to be drawn ");
@@ -17,6 +17,45 @@ namespace task
             int LimitC = int.Parse(blabla);
             System.Console.WriteLine(" ");
             System.Console.WriteLine(" ");
+            int test = welcome();
+
+
+
+            if (test == 1)
+            {
+                Random r = new Random();
+                int RandomNum = r.Next(0, LimitC);
+                System.Console.WriteLine(RandomNum);
+
+            }
+            else if (test == 2)
+            {
+                System.Console.WriteLine(" drawen list ");
+            }
+            else if (test == 3)
+            {
+                System.Console.WriteLine(" check num ");
+            }
+            else if (test == 4)
+            {
+                System.Console.WriteLine(" exit ");
+            }
+            else if (test != 1 || 2 || 3 || 4)
+            {
+                System.Console.WriteLine("pls entre one a the following choose");
+                welcome();
+            }
+
+
+
+
+
+        }
+
+
+
+            static int welcome()
+            {
 
             // player choose what he whant a do 
             System.Console.WriteLine("Welcom to the bingo club of swinburne");
@@ -24,59 +63,139 @@ namespace task
             System.Console.WriteLine(" 2 view all drawn number ");
             System.Console.WriteLine(" 3 Check specific number ");
             System.Console.WriteLine(" 4 Exit");
-
             // choose inpute for the menu 
+
             string TheInputPlayer = Console.ReadLine();
             int ChooseNum = int.Parse(TheInputPlayer);
             ChooseNum = Convert.ToInt32(TheInputPlayer);
-            System.Console.WriteLine();
-            System.Console.WriteLine();
-
-            //need to have a the limit ok the total number can be drawn
-
-            //all number stock in list<> 
-            List<int> listnum = new List<int>();
+            return ChooseNum;
 
 
 
-            //find solotion how to check if it is a numbre only
-            //choose 1
-            if (ChooseNum == 1)
-            {
-                //choose a generet random numbre 
-                Random r = new Random();
-                int RandomNum = r.Next(0, LimitC);
-                // remove the randomnumbre for the list 
-                listnum.Remove(RandomNum);
-
-
-                System.Console.WriteLine(RandomNum);
-
-                
-            }
-            /*
-            else if (ChooseNum == 2)
-            {
-                System.Console.WriteLine(" drawen list ");
-            }
-            else if (ChooseNum == 3)
-            {
-                System.Console.WriteLine(" check num ");
-            }
-            else if (ChooseNum == 4)
-            {
-                System.Console.WriteLine(" exit ");
-            }
-            else
-            {
-                System.Console.WriteLine("pls choose with the num 1 to 4 ");
-            }
             */
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //start the game et gice the limit value 
+            System.Console.WriteLine("welcome let's play a bingo befor starting choose the limit of the numbre ");
+            string blabla = Console.ReadLine();
+            int MaxNumbre = int.Parse(blabla);
+
+            System.Console.WriteLine(" ");
+            System.Console.WriteLine(" ");
+            System.Console.WriteLine("ok les's start make your choose");
+            System.Console.WriteLine(" ");
+            System.Console.WriteLine(" ");
+            System.Console.WriteLine(" 1 Drawn the next number  ");
+            System.Console.WriteLine(" 2 view all drawn number ");
+            System.Console.WriteLine(" 3 Check specific number ");
+            System.Console.WriteLine(" 4 Exit");
+
+            //Select menu and selector 
+
+            string Dontcare = Console.ReadLine();
+            int PickMenu = int.Parse(Dontcare);
+            if (PickMenu == 1)
+            {
+                Random r = new Random();
+                int RandomNum = r.Next(0, MaxNumbre);
+                System.Console.WriteLine(" ");
+                System.Console.WriteLine("------------------------------------------- ");
+                System.Console.WriteLine("le numbre IS  || " + RandomNum+ " ||");
+                System.Console.WriteLine("------------------------------------------- ");
+                System.Console.WriteLine(" ");
+                System.Console.WriteLine("what know ????");
+
+            }
+            else if (PickMenu == 2)
+            {
+                //Array of all Numbre
+                int[] ArrayNUM = new int[MaxNumbre];
+
+                for (int i = 1; i < ArrayNUM.Length; i++)
+                {
+                    ArrayNUM[i] = i;
+                }
+                
+
+
+
+                System.Console.WriteLine("hello numbre 2");
+                System.Console.WriteLine("hello numbre 2");
+                System.Console.WriteLine("hello numbre 2");
+                System.Console.WriteLine("hello numbre 2");
+                System.Console.WriteLine("hello numbre 2");
+                System.Console.WriteLine("hello numbre 2");
+            }
+
+
+
+
+
+
+        }
+        static void Menu()
+        {
+            System.Console.WriteLine(" 1 Drawn the next number  ");
+            System.Console.WriteLine(" 2 view all drawn number ");
+            System.Console.WriteLine(" 3 Check specific number ");
+            System.Console.WriteLine(" 4 Exit");
+
+            System.Console.WriteLine(" ");
+            System.Console.WriteLine(" ");
+
+
         }
     }
-
 }

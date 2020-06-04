@@ -1,17 +1,19 @@
 Introduction
-The Swinburne Bingo club has decided to update their practices and join the digital world.  They have requested a program to be made that is able to draw the numbers for a Bingo game.  
-They have already outsourced the creation of the bingo playing cards to some students.  They only require the number drawing to be created.
+The Swinburne Bingo club has decided to update their practices and join the digital world.  
+They have requested a program to be made that is able to draw the numbers for a Bingo game.  
+They have already outsourced the creation of the bingo playing cards to some students.  
+They only require the number drawing to be created.
 However, the average age of the Swinburne Bingo club is 110 and they are uncomfortable with using anything more than a console program.
 
 Tasks 
-Write a program that draws bingo numbers. When the program runs, it will randomly choose a number between 1 and a user inputted upper limit.  The program should start by requesting the upper limit from the user.
+Write a program that draws bingo numbers. When the program runs, it will randomly choose a number between 1 and a user inputted upper limit. 
+The program should start by requesting the upper limit from the user.
 It should then go to a main menu that looks like:
  
 
-Pass Tasks
 
-
-1.	Upon starting the program should ask for the upper limit of numbers to be drawn
+1.	Upon starting the program should ask for the upper limit
+ of numbers to be drawn
     i.	Program should not accept non-numeric input
     ii.	Program should not accept negative numbers
 
