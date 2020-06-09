@@ -7,191 +7,178 @@ namespace task
     class Program
     {
         static void Main(string[] args)
-        {/*
-            //basic menu
-            //starting game by asking the limmit
-
-            System.Console.WriteLine("How mush is yours upper limit of numbers to be drawn ");
-            System.Console.WriteLine(" ");
-            string blabla = Console.ReadLine();
-            int LimitC = int.Parse(blabla);
-            System.Console.WriteLine(" ");
-            System.Console.WriteLine(" ");
-            int test = welcome();
-
-
-
-            if (test == 1)
-            {
-                Random r = new Random();
-                int RandomNum = r.Next(0, LimitC);
-                System.Console.WriteLine(RandomNum);
-
-            }
-            else if (test == 2)
-            {
-                System.Console.WriteLine(" drawen list ");
-            }
-            else if (test == 3)
-            {
-                System.Console.WriteLine(" check num ");
-            }
-            else if (test == 4)
-            {
-                System.Console.WriteLine(" exit ");
-            }
-            else if (test != 1 || 2 || 3 || 4)
-            {
-                System.Console.WriteLine("pls entre one a the following choose");
-                welcome();
-            }
-
-
-
-
-
-        }
-
-
-
-            static int welcome()
-            {
-
-            // player choose what he whant a do 
-            System.Console.WriteLine("Welcom to the bingo club of swinburne");
-            System.Console.WriteLine(" 1 Drawn the next number  ");
-            System.Console.WriteLine(" 2 view all drawn number ");
-            System.Console.WriteLine(" 3 Check specific number ");
-            System.Console.WriteLine(" 4 Exit");
-            // choose inpute for the menu 
-
-            string TheInputPlayer = Console.ReadLine();
-            int ChooseNum = int.Parse(TheInputPlayer);
-            ChooseNum = Convert.ToInt32(TheInputPlayer);
-            return ChooseNum;
-
-
-
-            */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            //start the game et gice the limit value 
-            System.Console.WriteLine("welcome let's play a bingo befor starting choose the limit of the numbre ");
-            string blabla = Console.ReadLine();
-            int MaxNumbre = int.Parse(blabla);
-
-            //Array of all Numbre
-            int[] ArrayNUM = new int[MaxNumbre];
-            for (int i = 1; i < ArrayNUM.Length; i++)
-            {
-                ArrayNUM[i] = i;
-            }
-
-            System.Console.WriteLine(" ");
-            System.Console.WriteLine(" ");
-            System.Console.WriteLine("ok les's start make your choose");
-            System.Console.WriteLine(" ");
-            System.Console.WriteLine(" ");
-            System.Console.WriteLine(" 1 Drawn the next number  ");
-            System.Console.WriteLine(" 2 view all drawn number ");
-            System.Console.WriteLine(" 3 Check specific number ");
-            System.Console.WriteLine(" 4 Exit");
-
-            //Select menu and selector 
-
-            string Dontcare = Console.ReadLine();
-            int PickMenu = int.Parse(Dontcare);
-            if (PickMenu == 1)
-            {
-                Random r = new Random();
-                int RandomNum = r.Next(0, MaxNumbre);
-                //change the random num in array by zero  and fine le possition of the array to print the numbre again  
-                ArrayNUM[RandomNum] = 0;
-                
-                
-                System.Console.WriteLine(" ");
-                System.Console.WriteLine("------------------------------------------- ");
-                System.Console.WriteLine("le numbre IS  || " + RandomNum + " ||");
-                System.Console.WriteLine("------------------------------------------- ");
-                System.Console.WriteLine(" ");
-                System.Console.WriteLine("what know ????");
-                
-
-            }
-            
-           
-            
-           
-
-
-
-
-
-
-        }
-        static void Menu()
         {
+
+            //--------------------------------------welcoming part and set up the Upper limit 
+
+            System.Console.WriteLine("---------------------------------------------------------------------------------------------------");
+            System.Console.WriteLine("---------------------------------------------------------------------------------------------------");
+            System.Console.WriteLine("welcome let's play a bingo befor starting choose the upper limit  ");
+            System.Console.WriteLine("                    Mine limit is 20 to 999");
+            System.Console.WriteLine("---------------------------------------------------------------------------------------------------");
+            System.Console.WriteLine("---------------------------------------------------------------------------------------------------");
+            string MaxNumbre = Console.ReadLine();
+            int MaxNum;
+
+            if (int.TryParse(MaxNumbre, out MaxNum))
+            {
+
+                //fix the limit of  20 to 999
+                if (MaxNum <= 20 || MaxNum > 1000)
+                {
+                    System.Console.WriteLine("------------------------------------------------------------");
+                    System.Console.WriteLine("Have some limit ;) by the way mine is 999 and 20 drawns as minumun");
+                    System.Console.WriteLine("------------------------------------------------------------");
+                    for (int i = 0; i < 5; i++)
+                    {
+                        System.Console.WriteLine("try again");
+                        MaxNumbre = Console.ReadLine();
+                    }
+                    System.Console.WriteLine("--------------------------------------------------");
+                    System.Console.WriteLine("--------------------------------------------------");
+                    System.Console.WriteLine("you dont want a play faire enghout good by");
+                    System.Console.WriteLine("--------------------------------------------------");
+                    System.Console.WriteLine("--------------------------------------------------");
+                }
+                //the Numbre to use in array/list
+                else if (MaxNum >= 21)
+                {
+                    System.Console.WriteLine("You limit for this game is " + MaxNum + " know is time to ");
+
+                }
+
+                else
+                {
+                    System.Console.WriteLine("--------------------------------------------------");
+                    System.Console.WriteLine("--------------------------------------------------");
+                    System.Console.WriteLine(" || You have 5 try after you will simply exit the game || ");
+                    System.Console.WriteLine("--------------------------------------------------");
+                    System.Console.WriteLine("--------------------------------------------------");
+                    for (int i = 0; i < 5; i++)
+                    {
+                        System.Console.WriteLine("try again" + i++);
+                        MaxNumbre = Console.ReadLine();
+                    }
+                }
+            }
+
+            //--------------------------------------Pick numbre form Menu()--------------------------------
+
+            //----------------------------------if numbre one (random numbre)
+            int MenuNumbre = Menu();
+            for (int i = 0; i < MaxNum; i++)
+            {
+                
+                
+                //No duplicate numbers should be drawn need to work on it 
+
+                if (MenuNumbre == 1)
+                {
+
+                    Random r = new Random();
+                    int RandomNum = r.Next(0, MaxNum);
+                    System.Console.WriteLine("--------------------------------------------------");
+                    System.Console.WriteLine("--------------------------------------------------");
+                    System.Console.WriteLine("the Drawn numbre is  " + RandomNum);
+                    System.Console.WriteLine("--------------------------------------------------");
+                    System.Console.WriteLine("--------------------------------------------------");
+  
+
+                }
+
+            //----------------------------------if numbre 2 (Numbre list) not started
+
+                else if (MenuNumbre == 2)
+                {
+                    System.Console.WriteLine("not finish");
+                }
+
+                //----------------------------------if numbre3 prompted to enter numbers one by one to check if they have been drawn
+                else if (MenuNumbre == 3)
+                {
+                    System.Console.WriteLine("not finish");
+                }
+                //----------------------------------if num 4  exit game need to finish it 
+                else if (true)
+                {
+                    System.Console.WriteLine("thank you for play");
+                    break;
+                }
+                else
+                {
+                    System.Console.WriteLine("tape a numbre in a menue ");
+                   
+
+                }
+
+                MenuNumbre = Menu();
+            }
+        }
+
+
+        static int Menu()
+        {
+            System.Console.WriteLine(" ");
+            System.Console.WriteLine(" ");
+            System.Console.WriteLine("make your choose");
+            System.Console.WriteLine(" ");
             System.Console.WriteLine(" 1 Drawn the next number  ");
             System.Console.WriteLine(" 2 view all drawn number ");
             System.Console.WriteLine(" 3 Check specific number ");
             System.Console.WriteLine(" 4 Exit");
+            System.Console.WriteLine(" ");
+            System.Console.WriteLine(" ");
 
-            System.Console.WriteLine(" ");
-            System.Console.WriteLine(" ");
+            int Numbrechoos = int.Parse(Console.ReadLine());
+
+            return Numbrechoos;
 
 
         }
+
+
+
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+            Menu();
+            string Dontcare = Console.ReadLine();
+            int PickMenu = int.Parse(Dontcare);
+
+            switch (PickMenu)
+            {
+                case 1:
+                    if (PickMenu == 1)
+                    {
+                        Random r = new Random();
+                        int RandomNum = r.Next(0, MaxNumbre);
+                        System.Console.WriteLine(RandomNum);                        
+                    }                    
+                break;
+
+                case 2:
+                  
+                default:
+                    
+                    System.Console.WriteLine("You mush Choose between the option");
+                    break;
+            }*/
