@@ -14,12 +14,12 @@ It should then go to a main menu that looks like:
 
 1.	Upon starting the program should ask for the upper limit
  of numbers to be drawn
-    i.	Program should not accept non-numeric input
-    ii.	Program should not accept negative numbers
+    i.	Program should not accept non-numeric input*********
+    ii.	Program should not accept negative numbers *******
 
 2.	Upon pressing “1” a new number is drawn
     i.	No duplicate numbers should be drawn
-    ii.	No negative numbers should be drawn
+    ii.	No negative numbers should be drawn        ---------
 
 3.	Upon pressing “2” all drawn numbers should be printed
     i.	Provide an option to print all numbers in the order that they were drawn
