@@ -6,17 +6,23 @@ namespace task
 {
     class Program
     {
+
+        static void display(string MYTEXT)
+        {
+
+            System.Console.WriteLine("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+            System.Console.WriteLine("   --------------------------------------------------------------------------------   ");
+            System.Console.WriteLine("                        " + MYTEXT);
+            System.Console.WriteLine("   --------------------------------------------------------------------------------   ");
+            System.Console.WriteLine("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+
+
+        }
         static void Main(string[] args)
         {
-            //--------------------------------------welcoming part and set up the Upper limit 
+            //--------------------------------------welcoming part and set up the Upper limit    
 
-            System.Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------------------------");
-            System.Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------------------------");
-            System.Console.WriteLine("------------------------------------------welcome let's play a bingo befor starting choose the upper limit ---------------------------------- ");
-            System.Console.WriteLine("--------------------------------------------Mine limit is 20 to 999--------------------------------------------------------------------------");
-            System.Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------------------------");
-            System.Console.WriteLine("---------------------------------------------------------------------------------------------------------------------------------------------");
-
+            display("welcome let's play a bingo befor starting choose the upper limit \n                         Mine limit is 20 to 999");
 
             ////check if is a Numbre 
             int MaxNum = 0;
@@ -26,37 +32,31 @@ namespace task
                 
                 string s = Console.ReadLine();
                 bool result = int.TryParse(s, out MaxNum);
-
-                if (MaxNum > 20 && MaxNum < 1000 && (MaxNum % 1) == 0)
+                
+                // limite the selection for 20 to 999 with no decimal 
+                if (MaxNum > 19 && MaxNum < 1000 && (MaxNum % 1) == 0)
                 {
-                    System.Console.WriteLine("You limit for this game is " + MaxNum + " know is time to ");
+                    display("You limit for this game is " + MaxNum + " know is time to ");
                     
                     break;
                     
                 }
+                //last chance after exite the game 
                 else if (i == 9)
                 {
-                    System.Console.WriteLine("--------------------------------------------------------------------------------------------------------------------------------------");
-                    System.Console.WriteLine("--------------------------------------------------------------------------------------------------------------------------------------");
-                    System.Console.WriteLine(" -------------------------------Last change and the game will close automaticly  ");
-                    System.Console.WriteLine("--------------------------------------------------------------------------------------------------------------------------------------");
-                    System.Console.WriteLine("--------------------------------------------------------------------------------------------------------------------------------------");
+                    
+                    display("Last change and the game will close automaticly  ");
+                    
                 }
-
+                // message error if wrong numbre lettre or decimal 
                 else
                 {
-                    System.Console.WriteLine("must be a numbre betteew 20 and 999");
+                    display("must be a numbre betteew 20 and 999");
                 }
-
             }
-            //the selection of the menu 
+            //the selection class of the menu 
             Selection select = new Selection();
             select.Menu(MaxNum);
-
-           
-            
-
-
         }
     }
 }

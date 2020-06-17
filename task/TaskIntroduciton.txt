@@ -18,16 +18,16 @@ It should then go to a main menu that looks like:
     ii.	Program should not accept negative numbers *******
 
 2.	Upon pressing “1” a new number is drawn
-    i.	No duplicate numbers should be drawn
-    ii.	No negative numbers should be drawn        ---------
+    i.	No duplicate numbers should be drawn ***************
+    ii.	No negative numbers should be drawn    *************
 
 3.	Upon pressing “2” all drawn numbers should be printed
-    i.	Provide an option to print all numbers in the order that they were drawn
-    ii.	Provide an option to print all numbers in numerical order
+    i.	Provide an option to print all numbers in the order that they were drawn   *********
+    ii.	Provide an option to print all numbers in numerical order   *****************
 
-4.	Upon pressing “3” user is prompted to enter numbers one by one to check if they have been drawn
+4.	Upon pressing “3” user is prompted to enter numbers one by one to check if they have been drawn   ****************
 
-5.	Upon pressing “4” the program will exit
+5.	Upon pressing “4” the program will exit   *********************
 
 Extension (optional) (as above, but include):
     1.	Program will not accept non-numeric input and handle
